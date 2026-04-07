@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>16:9 Poster Frame</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:#111;
+  display:flex;align-items:center;justify-content:center;
+  height:100vh;width:100vw;
+}
+.frame{
+  width:90vw;
+  aspect-ratio:16/9;
+  max-height:90vh;
+  background:#ffffff;
+  border:2px solid #333;
+  position:relative;
+}
+.label{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:sans-serif;font-size:24px;color:#ccc;
+  text-align:center;
+}
+.dim{font-size:14px;color:#999;margin-top:4px;}
+
+/* Corner markers */
+.corner{position:absolute;width:20px;height:20px;border-color:#666;border-style:solid;}
+.tl{top:8px;left:8px;border-width:2px 0 0 2px;}
+.tr{top:8px;right:8px;border-width:2px 2px 0 0;}
+.bl{bottom:8px;left:8px;border-width:0 0 2px 2px;}
+.br{bottom:8px;right:8px;border-width:0 2px 2px 0;}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+  <div class="label">
+    16 : 9
+    <div class="dim">1920 × 1080 px</div>
+  </div>
+</div>
+</body>
+</html>
